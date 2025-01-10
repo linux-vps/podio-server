@@ -81,13 +81,6 @@ const newItem = await podio.Items.addItem(appId, {
 const webhooks = await podio.Webhooks.GetWebhooks(appId);
 ```
 
-## Công nghệ sử dụng
-
-- Node.js
-- TypeScript
-- Axios cho HTTP requests
-- dotenv để quản lý biến môi trường
-
 ## Cấu trúc dự án
 
 ```
