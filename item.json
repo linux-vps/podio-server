@@ -1,0 +1,618 @@
+{
+  "app": {
+    "app_id": 30095263,
+    "config": {
+      "icon": "42.png",
+      "icon_id": 42,
+      "item_name": "Bug",
+      "name": "Bugs",
+      "type": "standard"
+    },
+    "current_revision": 1,
+    "default_view_id": null,
+    "icon": "42.png",
+    "icon_id": 42,
+    "is_default": false,
+    "item_accounting_info": {
+      "org_id": 3707687,
+      "limit": 100,
+      "count": 22,
+      "percent": 22
+    },
+    "item_name": "Bug",
+    "link": "https://podio.com/aasc-9vpdud0szw/accounting-practice-management/apps/bugs",
+    "link_add": "https://podio.com/aasc-9vpdud0szw/accounting-practice-management/apps/bugs/items/new",
+    "name": "Bugs",
+    "sharefile_vault_url": null,
+    "space_id": 10348265,
+    "status": "active",
+    "url_add": "https://podio.com/aasc-9vpdud0szw/accounting-practice-management/apps/bugs/items/new",
+    "url": "https://podio.com/aasc-9vpdud0szw/accounting-practice-management/apps/bugs",
+    "url_label": "bugs"
+  },
+  "app_item_id": 2,
+  "app_item_id_formatted": "bug2",
+  "comments": [],
+  "created_by": {
+    "avatar": 2179828238,
+    "avatar_id": 2179828238,
+    "avatar_type": "file",
+    "image": {
+      "external_file_id": null,
+      "file_id": 2179828238,
+      "hosted_by": "podio",
+      "hosted_by_humanized_name": "Podio",
+      "link": "https://files.podio.com/2179828238",
+      "link_target": "_blank",
+      "thumbnail_link": "https://files.podio.com/2179828238",
+      "uuid_link": "https://files.podio.com/1bebb06d-dd22-4a93-a470-0b9f7dbd0f8c"
+    },
+    "last_seen_on": "2025-01-10 03:00:16",
+    "name": "Hoàng Hải Trung",
+    "id": 76976235,
+    "type": "user",
+    "url": "https://podio.com/users/76976235",
+    "user_id": 76976235
+  },
+  "created_on": "2025-01-09 08:31:08",
+  "created_via": {
+    "auth_client_id": 67118,
+    "display": true,
+    "id": 67118,
+    "name": "test key",
+    "url": null
+  },
+  "external_id": "bug-test-001",
+  "fields": [
+    {
+      "config": {
+        "default_value": null,
+        "delta": 0,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Title",
+        "mapping": null,
+        "required": true,
+        "settings": {
+          "size": "small",
+          "format": "plain"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "title",
+      "field_id": 269664955,
+      "label": "Title",
+      "status": "active",
+      "type": "text",
+      "values": [
+        {
+          "value": "Test Bug Report"
+        }
+      ]
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 1,
+        "description": "Enter a detailed description of the bug.",
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Description of problem",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "description-of-problem",
+      "field_id": 269664956,
+      "label": "Description of problem",
+      "status": "active",
+      "type": "text",
+      "values": [
+        {
+          "value": "<p>Đây là mô tả về vấn đề của bug</p>"
+        }
+      ]
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 2,
+        "description": "Describe, in steps, how to replicate the problem.",
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Steps to reproduce",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "steps-to-reproduce",
+      "field_id": 269664957,
+      "label": "Steps to reproduce",
+      "status": "active",
+      "type": "text",
+      "values": [
+        {
+          "value": "<ol><li>Bước 1</li><li>Bước 2</li><li>Bước 3</li></ol>"
+        }
+      ]
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 4,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Type",
+        "mapping": null,
+        "required": true,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Functional ",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Design",
+              "color": "E1D8ED"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Usability",
+              "color": "FFD5C2"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "type-2",
+      "field_id": 269664959,
+      "label": "Type",
+      "status": "active",
+      "type": "category",
+      "values": [
+        {
+          "value": {
+            "id": 1,
+            "status": "active",
+            "text": "Functional ",
+            "color": "DCEBD8"
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 5,
+        "description": "Enter a status for the issue, and keep it up to date as the bug is worked on. It will then be possible to filter by bug status.",
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Status",
+        "mapping": null,
+        "required": true,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Reported",
+              "color": "DDDDDD"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Assigned",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "In progress",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Fixed",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 5,
+              "status": "active",
+              "text": "Feedback required",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 6,
+              "status": "active",
+              "text": "Duplicate",
+              "color": "DDDDDD"
+            },
+            {
+              "id": 7,
+              "status": "active",
+              "text": "Rejected - works for me",
+              "color": "D2E4EB"
+            },
+            {
+              "id": 8,
+              "status": "active",
+              "text": "Rejected - feature request",
+              "color": "D2E4EB"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "status-2",
+      "field_id": 269664960,
+      "label": "Status",
+      "status": "active",
+      "type": "category",
+      "values": [
+        {
+          "value": {
+            "id": 1,
+            "status": "active",
+            "text": "Reported",
+            "color": "DDDDDD"
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 6,
+        "description": "Select the bugs priority. 'High' priority means that it should be fixed today, 'Medium' should be within a week, and 'Low' when there is time.",
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Priority",
+        "mapping": null,
+        "required": true,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Low",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Medium",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "High",
+              "color": "F7D1D0"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "priority-2",
+      "field_id": 269664961,
+      "label": "Priority",
+      "status": "active",
+      "type": "category",
+      "values": [
+        {
+          "value": {
+            "id": 2,
+            "status": "active",
+            "text": "Medium",
+            "color": "F7F0C5"
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 11,
+        "description": "It is mandatory that a test status is select. Be sure to keep updated appropriately.",
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Test status",
+        "mapping": null,
+        "required": true,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Not tested",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Tested",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "test-status-2",
+      "field_id": 269664966,
+      "label": "Test status",
+      "status": "active",
+      "type": "category",
+      "values": [
+        {
+          "value": {
+            "id": 1,
+            "status": "active",
+            "text": "Not tested",
+            "color": "F7D1D0"
+          }
+        }
+      ]
+    }
+  ],
+  "files": [],
+  "invite": null,
+  "is_liked": false,
+  "item_id": 2992144490,
+  "last_event_on": "2025-01-09 08:31:08",
+  "like_count": 0,
+  "link": "https://podio.com/aasc-9vpdud0szw/accounting-practice-management/apps/bugs/items/2",
+  "linked_account_data": null,
+  "linked_account_id": null,
+  "participants": {},
+  "presence": {
+    "user_id": 76976235,
+    "signature": "ef7f6743218ef930017b6985aeb3012a072d913e",
+    "ref_type": "item",
+    "ref_id": 2992144490
+  },
+  "priority": 2992144490,
+  "push": {
+    "channel": "/item/2992144490",
+    "timestamp": 1736478290,
+    "signature": "519d5bd47f0456921eb284cdf6af85a3dbba5f33",
+    "expires_in": 21600
+  },
+  "ratings": {
+    "like": {
+      "average": null,
+      "counts": {
+        "1": {
+          "total": 0,
+          "users": []
+        }
+      }
+    }
+  },
+  "recurrence": null,
+  "ref": null,
+  "refs": [],
+  "reminder": null,
+  "revision": 0,
+  "current_revision": {
+    "created_by": {
+      "avatar": 2179828238,
+      "avatar_id": 2179828238,
+      "avatar_type": "file",
+      "image": {
+        "external_file_id": null,
+        "file_id": 2179828238,
+        "hosted_by": "podio",
+        "hosted_by_humanized_name": "Podio",
+        "link": "https://files.podio.com/2179828238",
+        "link_target": "_blank",
+        "thumbnail_link": "https://files.podio.com/2179828238",
+        "uuid_link": "https://files.podio.com/1bebb06d-dd22-4a93-a470-0b9f7dbd0f8c"
+      },
+      "last_seen_on": "2025-01-10 03:00:16",
+      "name": "Hoàng Hải Trung",
+      "id": 76976235,
+      "type": "user",
+      "url": "https://podio.com/users/76976235",
+      "user_id": 76976235
+    },
+    "created_on": "2025-01-09 08:31:08",
+    "created_via": {
+      "auth_client_id": 67118,
+      "display": true,
+      "id": 67118,
+      "name": "test key",
+      "url": null
+    },
+    "item_revision_id": 13383545739,
+    "revision": 0,
+    "type": "creation",
+    "user": {
+      "avatar": 2179828238,
+      "avatar_id": 2179828238,
+      "avatar_type": "file",
+      "image": {
+        "external_file_id": null,
+        "file_id": 2179828238,
+        "hosted_by": "podio",
+        "hosted_by_humanized_name": "Podio",
+        "link": "https://files.podio.com/2179828238",
+        "link_target": "_blank",
+        "thumbnail_link": "https://files.podio.com/2179828238",
+        "uuid_link": "https://files.podio.com/1bebb06d-dd22-4a93-a470-0b9f7dbd0f8c"
+      },
+      "last_seen_on": "2025-01-10 03:00:16",
+      "name": "Hoàng Hải Trung",
+      "id": 76976235,
+      "type": "user",
+      "url": "https://podio.com/users/76976235",
+      "user_id": 76976235
+    }
+  },
+  "initial_revision": {
+    "created_by": {
+      "avatar": 2179828238,
+      "avatar_id": 2179828238,
+      "avatar_type": "file",
+      "image": {
+        "external_file_id": null,
+        "file_id": 2179828238,
+        "hosted_by": "podio",
+        "hosted_by_humanized_name": "Podio",
+        "link": "https://files.podio.com/2179828238",
+        "link_target": "_blank",
+        "thumbnail_link": "https://files.podio.com/2179828238",
+        "uuid_link": "https://files.podio.com/1bebb06d-dd22-4a93-a470-0b9f7dbd0f8c"
+      },
+      "last_seen_on": "2025-01-10 03:00:16",
+      "name": "Hoàng Hải Trung",
+      "id": 76976235,
+      "type": "user",
+      "url": "https://podio.com/users/76976235",
+      "user_id": 76976235
+    },
+    "created_on": "2025-01-09 08:31:08",
+    "created_via": {
+      "auth_client_id": 67118,
+      "display": true,
+      "id": 67118,
+      "name": "test key",
+      "url": null
+    },
+    "item_revision_id": 13383545739,
+    "revision": 0,
+    "type": "creation",
+    "user": {
+      "avatar": 2179828238,
+      "avatar_id": 2179828238,
+      "avatar_type": "file",
+      "image": {
+        "external_file_id": null,
+        "file_id": 2179828238,
+        "hosted_by": "podio",
+        "hosted_by_humanized_name": "Podio",
+        "link": "https://files.podio.com/2179828238",
+        "link_target": "_blank",
+        "thumbnail_link": "https://files.podio.com/2179828238",
+        "uuid_link": "https://files.podio.com/1bebb06d-dd22-4a93-a470-0b9f7dbd0f8c"
+      },
+      "last_seen_on": "2025-01-10 03:00:16",
+      "name": "Hoàng Hải Trung",
+      "id": 76976235,
+      "type": "user",
+      "url": "https://podio.com/users/76976235",
+      "user_id": 76976235
+    }
+  },
+  "revisions": [
+    {
+      "created_by": {
+        "avatar": 2179828238,
+        "avatar_id": 2179828238,
+        "avatar_type": "file",
+        "image": {
+          "external_file_id": null,
+          "file_id": 2179828238,
+          "hosted_by": "podio",
+          "hosted_by_humanized_name": "Podio",
+          "link": "https://files.podio.com/2179828238",
+          "link_target": "_blank",
+          "thumbnail_link": "https://files.podio.com/2179828238",
+          "uuid_link": "https://files.podio.com/1bebb06d-dd22-4a93-a470-0b9f7dbd0f8c"
+        },
+        "last_seen_on": "2025-01-10 03:00:16",
+        "name": "Hoàng Hải Trung",
+        "id": 76976235,
+        "type": "user",
+        "url": "https://podio.com/users/76976235",
+        "user_id": 76976235
+      },
+      "created_on": "2025-01-09 08:31:08",
+      "created_via": {
+        "auth_client_id": 67118,
+        "display": true,
+        "id": 67118,
+        "name": "test key",
+        "url": null
+      },
+      "item_revision_id": 13383545739,
+      "revision": 0,
+      "type": "creation",
+      "user": {
+        "avatar": 2179828238,
+        "avatar_id": 2179828238,
+        "avatar_type": "file",
+        "image": {
+          "external_file_id": null,
+          "file_id": 2179828238,
+          "hosted_by": "podio",
+          "hosted_by_humanized_name": "Podio",
+          "link": "https://files.podio.com/2179828238",
+          "link_target": "_blank",
+          "thumbnail_link": "https://files.podio.com/2179828238",
+          "uuid_link": "https://files.podio.com/1bebb06d-dd22-4a93-a470-0b9f7dbd0f8c"
+        },
+        "last_seen_on": "2025-01-10 03:00:16",
+        "name": "Hoàng Hải Trung",
+        "id": 76976235,
+        "type": "user",
+        "url": "https://podio.com/users/76976235",
+        "user_id": 76976235
+      }
+    }
+  ],
+  "rights": [
+    "grant",
+    "add_file",
+    "update",
+    "add_task",
+    "view",
+    "delete",
+    "subscribe",
+    "add_conversation",
+    "comment",
+    "rate"
+  ],
+  "sharefile_vault_folder_id": null,
+  "sharefile_vault_url": null,
+  "subscribed": true,
+  "subscribed_count": 1,
+  "tags": [
+    "sample",
+    "test"
+  ],
+  "title": "Test Bug Report",
+  "user_ratings": {
+    "like": null
+  }
+}
