@@ -97,11 +97,7 @@ const webhooks = await podio.Webhooks.GetWebhooks(appId);
 │   ├── types/          # TypeScript types
 │   ├── Services/       # Shared services
 │   └── app.ts          # File chương trình chính
-├── .env                # File cấu hình
-├── .env.example        # Mẫu file cấu hình
-├── package.json        # Quản lý dependencies
-├── tsconfig.json       # Cấu hình TypeScript
-└── README.md           # Tài liệu dự án
+
 ```
 ## Tài liệu
 Claude 3.5 Sonnet
