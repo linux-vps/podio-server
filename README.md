@@ -1,4 +1,4 @@
-# TestPodio
+# Podio API
 
 ứng dụng TypeScript để tương tác với Podio API, cung cấp các phương thức đơn giản và mạnh mẽ để làm việc với Podio.
 
@@ -102,5 +102,7 @@ const webhooks = await podio.Webhooks.GetWebhooks(appId);
 ├── tsconfig.json      # Cấu hình TypeScript
 └── README.md         # Tài liệu dự án
 ```
-
+## Tài liệu
 Claude 3.5 Sonnet
+https://github.com/podio/podio-js
+https://github.com/1King-coder/Node-PodioSDK
