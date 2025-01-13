@@ -1,5 +1,6 @@
 import { config } from 'dotenv';
-import { Podio } from "./";
+import { Podio, PodioOrganization } from "./";
+import { AddAppConfig } from "./types/podio_types";
 import fs from "fs";
 
 config();
@@ -16,10 +17,10 @@ async function Main(): Promise<void> {
   // const all_items = await pd.Items.FilterItems(30095263);
   // console.log("\n\nall items", all_items);
 
-  // Lấy một item cụ thể
-  const one_item = await pd.Items.GetItemByAppItemId(30095263, 2);
-  console.log("\n\none item", one_item);
-  fs.writeFileSync("./item.json", JSON.stringify(one_item, null, 2));
+  // // Lấy một item cụ thể
+  // const one_item = await pd.Items.GetItemByAppItemId(30095263, 2);
+  // console.log("\n\none item", one_item);
+  // fs.writeFileSync("./item.json", JSON.stringify(one_item, null, 2));
 
   // // Tạo item mới
   // const newItem = {
@@ -55,6 +56,96 @@ async function Main(): Promise<void> {
 
   // const created_item = await pd.Items.addItem(30095263, newItem);
   // console.log("\n\nCreated item:", created_item);
+
+
+
+
+
+
+
+  //   // Lấy danh sách organizations
+  // const orgs = await pd.Organizations.getOrganizations();
+  // console.log("Danh sách organizations:", orgs);
+
+  // // Lấy thông tin chi tiết organization
+  // const org = await pd.Organizations.getOrganization(3707687);
+  // console.log("Thống tin chi tiết organization:", org);
+
+  // // Tạo organization mới
+  // const newOrg = await pd.Organizations.addOrganization({
+  //   name: "My Organization",
+  //   url: "https://myorg.com"
+  // });
+
+  // // Lấy danh sách spaces trong organization
+  // const spaces = await pd.Organizations.getOrganizationSpaces(3707687);
+  // console.log("Danh sách spaces trong organization:", spaces);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Tạo ứng dụng mới
+const appConfig: AddAppConfig = {
+  space_id: 10348265, // ID của workspace
+  config: {
+    name: "Bug Tracker",
+    item_name: "Bug",
+    description: "Ứng dụng theo dõi lỗi",
+    icon: "3.png",
+    fields: [
+      {
+        type: "text",
+        external_id: "title",
+        config: {
+          label: "Tiêu đề",
+          required: true
+        }
+      },
+      {
+        type: "text",
+        external_id: "description",
+        config: {
+          label: "Mô tả",
+          required: true
+        }
+      }
+    ]
+  }
+};
+
+// Tạo ứng dụng mới
+const newApp = await pd.Applications.addApp(appConfig);
+console.log("ID ứng dụng mới:", newApp.app_id);
+
+// Lấy thông tin ứng dụng
+const app = await pd.Applications.getApp(newApp.app_id);
+console.log("Thông tin ứng dụng:", app);
+
+// Cập nhật ứng dụng
+await pd.Applications.updateApp(newApp.app_id, {
+  config: {
+    ...appConfig.config,
+    description: "Mô tả mới cho ứng dụng"
+  }
+});
+
+// Lấy danh sách ứng dụng trong workspace
+const apps = await pd.Applications.getApps(appConfig.space_id);
+console.log("Danh sách ứng dụng:", apps);
+
+
 }
 
 Main();

@@ -1,7 +1,35 @@
-import { AddItemPayload, AddItemResponse, ExportOptions, ExportResponse, FilterItemsResponse, FilterOptions, FindReferenceableItemsResponse, ItemFieldsValues, ItemRevision, PodioAppItem, PodioCreatedBy, PodioCreatedVia, PodioFields, PodioFile, PodioItemRevisionDif, RearrangeOptions, StrBool, UpdateItemPayload, UpdateItemResponse, Webhook, WebhookOptions } from "../types/podio_types";
-
-
-
+import { 
+  AddItemPayload, 
+  AddItemResponse,
+  ExportOptions,
+  ExportResponse, 
+  FilterItemsResponse, 
+  FilterOptions, 
+  FindReferenceableItemsResponse, 
+  ItemFieldsValues, 
+  ItemRevision, 
+  PodioAppItem, 
+  PodioCreatedBy, 
+  PodioCreatedVia, 
+  PodioFields, 
+  PodioFile, 
+  PodioItemRevisionDif, 
+  RearrangeOptions, 
+  StrBool, 
+  UpdateItemPayload, 
+  UpdateItemResponse, 
+  Webhook, 
+  WebhookOptions,
+  AddAppConfig,
+  AddAppResponse,
+  AppCalculation,
+  InstallAppResponse,
+  PodioApp,
+  UpdateAppConfig,
+  PodioOrganization,
+  CreateOrganizationConfig,
+  PodioSpace
+} from "../types/podio_types";
 
 export interface IPodio {
 
@@ -15,6 +43,8 @@ export interface IPodio {
   criaWebhook (options: WebhookOptions, appId?: number,): Promise<{webhook_id: number}>;
   Items: IPodioItems
   Webhooks: IPodioWebhooks
+  Applications: IPodioApplications
+  Organizations: IPodioOrganizations
 }
 
 export interface IPodioItems
@@ -59,4 +89,30 @@ export interface IPodioWebhooks
   GetWebhooks (appId: number,): Promise<Webhook[]>
   ValidateWebhook (webhook_id: number, webhook_verification_code: string): Promise<object>
   DeleteWebhook (webhook_id: number): Promise<object>
+}
+
+export interface IPodioApplications {
+  addApp(config: AddAppConfig): Promise<AddAppResponse>;
+  getApp(appId: number): Promise<PodioApp>;
+  updateApp(appId: number, config: UpdateAppConfig): Promise<void>;
+  deleteApp(appId: number): Promise<void>;
+  getApps(spaceId: number): Promise<PodioApp[]>;
+  getCalculations(appId: number): Promise<AppCalculation[]>;
+  installApp(appId: number, spaceId: number): Promise<InstallAppResponse>;
+  deactivateApp(appId: number): Promise<void>;
+  activateApp(appId: number): Promise<void>;
+}
+
+export interface IPodioOrganizations {
+  // Lấy danh sách tất cả các organizations
+  getOrganizations(): Promise<PodioOrganization[]>;
+  
+  // Lấy thông tin chi tiết của một organization
+  getOrganization(orgId: number): Promise<PodioOrganization>;
+  
+  // Tạo một organization mới
+  addOrganization(config: CreateOrganizationConfig): Promise<PodioOrganization>;
+  
+  // Lấy danh sách tất cả các spaces trong một organization
+  getOrganizationSpaces(orgId: number): Promise<PodioSpace[]>;
 }

@@ -398,3 +398,148 @@ export type UpdateItemResponse = {
   revision: number;
   title: string;
 }
+
+export interface AddAppConfig {
+  space_id: number;
+  config: {
+    name: string;
+    item_name: string;
+    description?: string;
+    usage?: string;
+    external_id?: string;
+    icon?: string;
+    icon_id?: number;
+    allow_edit?: boolean;
+    default_view?: string;
+    allow_attachments?: boolean;
+    silent?: boolean;
+    silent_creates?: boolean;
+    silent_edits?: boolean;
+    fields?: Array<{
+      type: string;
+      external_id?: string;
+      config: {
+        label: string;
+        description?: string;
+        required?: boolean;
+        visible?: boolean;
+        hidden?: boolean;
+        delta?: number;
+        settings?: any;
+      }
+    }>;
+  }
+}
+
+export interface UpdateAppConfig extends Omit<AddAppConfig, 'space_id'> {}
+
+export interface PodioApp {
+  app_id: number;
+  original: number;
+  original_revision: number;
+  status: string;
+  icon: string;
+  icon_id: number;
+  space_id: number;
+  owner: any;
+  config: {
+    name: string;
+    item_name: string;
+    description: string;
+    usage: string;
+    external_id: string;
+    default_view: string;
+    allow_edit: boolean;
+    allow_attachments: boolean;
+    silent: boolean;
+    silent_creates: boolean;
+    silent_edits: boolean;
+    fields: Array<any>;
+  };
+  url: string;
+  url_add: string;
+  link: string;
+  link_add: string;
+  current_revision: number;
+  subscribed: boolean;
+  rights: string[];
+  field_ids: number[];
+  fields: Array<any>;
+}
+
+export interface AppCalculation {
+  title: string;
+  script: string;
+  draft: string;
+  draft_status: string;
+  status: string;
+  last_error: string | null;
+  created_on: string;
+  started_on: string | null;
+  ended_on: string | null;
+}
+
+export interface AddAppResponse {
+  app_id: number;
+  original: number;
+  link: string;
+  url: string;
+  link_add: string;
+  url_add: string;
+  url_label: string;
+}
+
+export interface InstallAppResponse {
+  app_id: number;
+}
+
+export interface PodioOrganization {
+  org_id: number;
+  name: string;
+  type: string;
+  logo?: number;
+  url: string;
+  url_label: string;
+  premium: boolean;
+  role?: string;
+  status: string;
+  sales_agent_id?: number;
+  created_on: string;
+  domains: string[];
+  rights: string[];
+  rank: number;
+}
+
+export interface CreateOrganizationConfig {
+  name: string;
+  logo?: number;
+  segment?: string;
+  url?: string;
+  url_label?: string;
+  billing_interval?: 'monthly' | 'yearly';
+  domains?: string[];
+}
+
+export interface PodioSpace {
+  space_id: number;
+  name: string;
+  url: string;
+  url_label: string;
+  org_id: number;
+  contact_count: number;
+  members: number;
+  role?: string;
+  rights: string[];
+  post_on_new_app: boolean;
+  post_on_new_member: boolean;
+  subscribed: boolean;
+  privacy: 'open' | 'closed' | 'private';
+  auto_join: boolean;
+  type: string;
+  created_on: string;
+  created_by: {
+    user_id: number;
+    name: string;
+    url: string;
+  };
+}

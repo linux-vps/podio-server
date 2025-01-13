@@ -1,4 +1,4 @@
-PODIO_CLIENT_ID= lấy từ https://podio.com/settings/api?force_locale=en_US
-PODIO_CLIENT_SECRET= lấy từ https://podio.com/settings/api?force_locale=en_US
-PODIO_USER= email mà đăng nhập podio
+PODIO_CLIENT_ID=lấy từ https://podio.com/settings/api?force_locale=en_US
+PODIO_CLIENT_SECRET=lấy từ https://podio.com/settings/api?force_locale=en_US
+PODIO_USER=email mà đăng nhập podio
 PODIO_PASSWORD=Mật khẩu

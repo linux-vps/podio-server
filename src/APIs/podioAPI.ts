@@ -32,11 +32,16 @@ import {
 
 import { PodioItems } from "./Methods/Items";
 import { PodioWebhooks } from "./Methods/Webhooks";
+import { PodioApplications } from "./Methods/Applications";
+import { PodioOrganizations } from "./Methods/Organizations";
 
 export class Podio implements IPodio {
   private token: string = "";
   public Items: PodioItems;
   public Webhooks: IPodioWebhooks;
+  public Applications: PodioApplications;
+  public Organizations: PodioOrganizations;
+
 
   constructor(
     public creds: PodioCreds,
@@ -48,6 +53,8 @@ export class Podio implements IPodio {
     this.authenticate();
     this.Items = new PodioItems(this);
     this.Webhooks = new PodioWebhooks(this);
+    this.Applications = new PodioApplications(this);
+    this.Organizations = new PodioOrganizations(this);
   }
   criaWebhook(options: WebhookOptions, appId?: number): Promise<{ webhook_id: number; }>;
   criaWebhook(options: WebhookOptions): Promise<{ webhook_id: number; }>;
