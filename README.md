@@ -7,7 +7,7 @@
 ### Xác thực (Authentication)
 - Xác thực tự động với Podio API
 - Quản lý và làm mới token
-- Lưu trữ token trong file JSON
+- Lưu trữ token trong file JSON 
 
 ### Quản lý Items
 - **Thêm và Sửa Items**

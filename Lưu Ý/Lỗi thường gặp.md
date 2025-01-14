@@ -1,6 +1,6 @@
 # Các Lỗi Thường Gặp Khi Sử Dụng Podio API
 
-## 1. Lỗi Khi Cài Đặt Icon Trong Request
+## 1. Lỗi Khi Cài Đặt Icon Trong Request 
 
 ### Vấn đề
 Khi cố gắng cài đặt icon bằng cách sử dụng đường dẫn local, Sẽ gặp lỗi:
