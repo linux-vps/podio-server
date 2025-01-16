@@ -138,7 +138,7 @@ async function Main(): Promise<void> {
 
 //     console.log("1. Upload file lên Podio");
 //     const uploadResult = await pd.Files.uploadFile(tempFilePath, "test.txt");
-//     console.log("uploaded ✅:", uploadResult);
+//     console.log("uploaded:", uploadResult);
 
 //     // Lấy ID của một item attach file
 //     console.log("\n2. Lấy thông tin một item để test attach file");
@@ -149,7 +149,7 @@ async function Main(): Promise<void> {
 
 //       console.log("\n3. Attach file vào item");
 //       const attachResult = await pd.Files.attachFile(uploadResult.file_id, "item", itemId);
-//       console.log("attached ✅:", attachResult);
+//       console.log("attached:", attachResult);
 
 //       console.log("\n4. Lấy danh sách files của item");
 //       const files = await pd.Files.getFiles("item", itemId);
@@ -157,16 +157,16 @@ async function Main(): Promise<void> {
 
 //       console.log("\n5. Cập nhật mô tả cho file");
 //       await pd.Files.updateFile(uploadResult.file_id, "Đây là file test được cập nhật mô tả");
-//       console.log("updated ✅");
+//       console.log("updated");
 
 //       console.log("\n6. Xóa file");
 //       await pd.Files.deleteFile(uploadResult.file_id);
-//       console.log("deleted ✅");
+//       console.log("deleted");
 //     }
 
 //     // Xóa file sau khi xong
 //     fs.unlinkSync(tempFilePath);
-//     console.log("deleted temp file ✅");
+//     console.log("deleted temp file");
 //   } catch (error) {
 //     console.error("Có lỗi xảy ra:", error);
 //   }
