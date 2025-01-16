@@ -93,6 +93,6 @@ const webhooks = await podio.Webhooks.GetWebhooks(appId);
 
 ```
 ## Tài liệu
-Claude 3.5 Sonnet
-https://github.com/podio/podio-js
-https://github.com/1King-coder/Node-PodioSDK
+- Claude 3.5 Sonnet
+- https://github.com/podio/podio-js
+- https://github.com/1King-coder/Node-PodioSDK
