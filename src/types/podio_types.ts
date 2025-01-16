@@ -182,27 +182,33 @@ export type PodioItemRevision = {
 }
 
 export type PodioFile = {
-  created_by: PodioCreatedBy,
-  created_on: string,
-  created_via: PodioCreatedVia,
-  description: string | null,
-  external_file_id: string | null,
-  file_id: number,
-  hosted_by: string,
-  hosted_by_humanized_name: string,
-  link: string,
-  link_target: string,
-  mimetype: string,
-  name: string,
-  perma_link: string | null,
-  presence: string | null,
-  push: string | null,
-  replaces: object[],
-  rights: string[],
-  size: number,
-  thumbnail_link: string,
-  uuid_link: number | null
+  file_id: number;
+  name: string;
+  description?: string;
+  mimetype: string;
+  size: number;
+  created_on: string;
+  created_by: PodioCreatedBy;
+  link: string;
+  perma_link: string;
+  thumbnail_link?: string;
+  hosted_by: string;
+  rights: string[];
 }
+
+export type UploadFileResponse = {
+  file_id: number;
+  link: string;
+  name: string;
+  size: number;
+  mimetype: string;
+};
+
+export type AttachFileResponse = {
+  file_id: number;
+  ref_type: string;
+  ref_id: number;
+};
 
 export type PodioSearchReferenceOptions = {
   target: "task_reference"| "task_responsible"| "alert"| "conversation"| "conversation_presence"| "grant"| "item_field" | "item_created_by"| "item_created_via"| "item_location"| "item_tags"| "global_nav"| "script_variables"| "apps"| "invite"| "extension"| "spaces"| "flow_app_dependencies"|
@@ -393,6 +399,16 @@ export type RearrangeOptions = {
 
 export type StrBool = "true" | "false"
 
+export type FileUploadResponse = {
+  file_id: number;
+  link: string;
+  perma_link: string;
+}
+
+export type FileAttachResponse = {
+  file_id: number;
+  revision: number;
+}
 
 export type UpdateItemResponse = {
   revision: number;

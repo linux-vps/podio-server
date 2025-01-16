@@ -15,10 +15,12 @@
   "dependencies": {
     "@types/axios": "^0.9.36",
     "@types/dotenv": "^6.1.1",
+    "@types/form-data": "^2.5.2",
     "@types/node-fetch": "^2.6.11",
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "form-data": "^4.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },

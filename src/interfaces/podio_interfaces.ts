@@ -12,7 +12,6 @@ import {
   PodioCreatedBy, 
   PodioCreatedVia, 
   PodioFields, 
-  PodioFile, 
   PodioItemRevisionDif, 
   RearrangeOptions, 
   StrBool, 
@@ -28,7 +27,9 @@ import {
   UpdateAppConfig,
   PodioOrganization,
   CreateOrganizationConfig,
-  PodioSpace
+  PodioSpace,
+  PodioFile,
+  FileAttachResponse
 } from "../types/podio_types";
 
 export interface IPodio {
@@ -45,6 +46,7 @@ export interface IPodio {
   Webhooks: IPodioWebhooks
   Applications: IPodioApplications
   Organizations: IPodioOrganizations
+  Files: IPodioFiles
 }
 
 export interface IPodioItems
@@ -115,4 +117,12 @@ export interface IPodioOrganizations {
   
   // Lấy danh sách tất cả các spaces trong một organization
   getOrganizationSpaces(orgId: number): Promise<PodioSpace[]>;
+}
+
+export interface IPodioFiles {
+  uploadFile(filePath: string, fileName: string): Promise<{file_id: number}>;
+  attachFile(fileId: number, refType: string, refId: number): Promise<FileAttachResponse>;
+  getFiles(refType: string, refId: number): Promise<PodioFile[]>;
+  updateFile(fileId: number, description: string): Promise<void>;
+  deleteFile(fileId: number): Promise<void>;
 }

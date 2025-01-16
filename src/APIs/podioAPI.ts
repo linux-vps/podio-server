@@ -5,7 +5,8 @@ import {
   IPodio,
   IPodioItems,
   IPodioWebhooks,
-  } from "../interfaces/podio_interfaces";
+
+} from "../interfaces/podio_interfaces";
 import {
   FilterOptions,
   PodioTokenData,
@@ -34,6 +35,7 @@ import { PodioItems } from "./Methods/Items";
 import { PodioWebhooks } from "./Methods/Webhooks";
 import { PodioApplications } from "./Methods/Applications";
 import { PodioOrganizations } from "./Methods/Organizations";
+import { PodioFiles } from "./Methods/Files";
 
 export class Podio implements IPodio {
   private token: string = "";
@@ -41,12 +43,12 @@ export class Podio implements IPodio {
   public Webhooks: IPodioWebhooks;
   public Applications: PodioApplications;
   public Organizations: PodioOrganizations;
-
+  public Files: PodioFiles;
 
   constructor(
     public creds: PodioCreds,
     public token_path: string="./token.json"
-    )
+  )
   {
     this.token_path = token_path;
     this.creds = creds;
@@ -55,6 +57,8 @@ export class Podio implements IPodio {
     this.Webhooks = new PodioWebhooks(this);
     this.Applications = new PodioApplications(this);
     this.Organizations = new PodioOrganizations(this);
+    this.Files = new PodioFiles(this);
+
   }
   criaWebhook(options: WebhookOptions, appId?: number): Promise<{ webhook_id: number; }>;
   criaWebhook(options: WebhookOptions): Promise<{ webhook_id: number; }>;
